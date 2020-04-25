@@ -28,8 +28,6 @@ class DocumentViewController: UIViewController {
 		self.navigationController?.view.tintColor = .appTintColor
 		self.view.tintColor = .appTintColor
 		
-		updateTheme()
-
 		textView.alwaysBounceVertical = true
 		
 		keyboardObserver.observe { [weak self] (state) in
@@ -84,32 +82,8 @@ class DocumentViewController: UIViewController {
 		
 	}
 	
-	private func updateTheme() {
-		
-		let font = UserDefaultsController.shared.font
-		let fontSize = UserDefaultsController.shared.fontSize
-		textView.font = UIFont(name: font, size: fontSize)
-		
-		if UserDefaultsController.shared.isDarkMode {
-			textView.textColor = .white
-			textView.backgroundColor = .darkBackgroundColor
-			textView.keyboardAppearance = .dark
-			textView.indicatorStyle = .white
-			navigationController?.navigationBar.barStyle = .blackTranslucent
-		} else {
-			textView.textColor = .black
-			textView.backgroundColor = .white
-			textView.keyboardAppearance = .default
-		}
-		
-		self.view.backgroundColor = textView.backgroundColor
-		
-	}
-	
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-
     }
 
 	override func viewDidDisappear(_ animated: Bool) {

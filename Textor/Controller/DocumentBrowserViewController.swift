@@ -21,27 +21,12 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController {
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
 
-        NotificationCenter.default.addObserver(self, selector: #selector(self.setTheme), name: .themeChanged, object: nil)
-		
-        // Update the style of the UIDocumentBrowserViewController
-        setTheme()
-
 		view.tintColor = .appTintColor
 
 		let settingsBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Settings"), style: .done, target: self, action: #selector(showSettings))
 		
 		self.additionalLeadingNavigationBarButtonItems = [settingsBarButtonItem]
 	}
-
-    @objc func setTheme() {
-
-		if UserDefaultsController.shared.isDarkMode {
-            self.browserUserInterfaceStyle = .dark
-        } else {
-            self.browserUserInterfaceStyle = .white
-        }
-
-    }
 
 	var snapshotDocumentIndex = 0
 
@@ -51,12 +36,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController {
 		if UserDefaultsController.shared.isFastlane {
 
 			var snapshotDocuments = ["Think different.txt", "Planets.txt", "Circle.svg"]
-
-			if snapshotDocumentIndex == 2 {
-				UserDefaultsController.shared.isDarkMode = true
-			} else {
-				UserDefaultsController.shared.isDarkMode = false
-			}
 
 			NotificationCenter.default.post(name: .themeChanged, object: nil)
 
@@ -100,10 +79,10 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController {
 		transitionController?.targetView = documentViewController.textView
 
 		documentViewController.title = documentURL.lastPathComponent
-
 		let navCon = UINavigationController(rootViewController: documentViewController)
 
 		navCon.transitioningDelegate = self
+		navCon.modalPresentationStyle = .fullScreen
 
         present(navCon, animated: true, completion: nil)
     }

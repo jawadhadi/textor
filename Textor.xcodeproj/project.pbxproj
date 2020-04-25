@@ -17,7 +17,6 @@
 		BE31644E1FF95FF00071AE58 /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE31644D1FF95FF00071AE58 /* DocumentManager.swift */; };
 		BE3BE749205B046E0044356A /* UITableViewCell+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BE748205B046E0044356A /* UITableViewCell+Labels.swift */; };
 		BE5CE1132059AA2500158BE9 /* StoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CE1122059AA2500158BE9 /* StoryboardFactory.swift */; };
-		BE5CE1152059AB5E00158BE9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5CE1142059AB5E00158BE9 /* Theme.swift */; };
 		BEC104DF2054481F009F56E7 /* Planets.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEC104DE2054481F009F56E7 /* Planets.txt */; };
 		BEC104E320546728009F56E7 /* Circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = BEC104E220546728009F56E7 /* Circle.svg */; };
 		BEC104E520546730009F56E7 /* Pharaoh.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEC104E420546730009F56E7 /* Pharaoh.txt */; };
@@ -60,7 +59,6 @@
 		BE31644D1FF95FF00071AE58 /* DocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentManager.swift; sourceTree = "<group>"; };
 		BE3BE748205B046E0044356A /* UITableViewCell+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Labels.swift"; sourceTree = "<group>"; };
 		BE5CE1122059AA2500158BE9 /* StoryboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardFactory.swift; sourceTree = "<group>"; };
-		BE5CE1142059AB5E00158BE9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		BEC104DE2054481F009F56E7 /* Planets.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Planets.txt; sourceTree = "<group>"; };
 		BEC104E220546728009F56E7 /* Circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Circle.svg; sourceTree = "<group>"; };
 		BEC104E420546730009F56E7 /* Pharaoh.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pharaoh.txt; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				BE000C2B1FF9451F00D06B91 /* Document.swift */,
-				BE5CE1142059AB5E00158BE9 /* Theme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 				BECE40FA2038DB67004889F0 /* UIViewController+Alerts.swift in Sources */,
 				BEDDAB152058745300AC9396 /* Notification+Name.swift in Sources */,
 				BEDDAB192058811F00AC9396 /* Bundle+Info.swift in Sources */,
-				BE5CE1152059AB5E00158BE9 /* Theme.swift in Sources */,
 				BE31644E1FF95FF00071AE58 /* DocumentManager.swift in Sources */,
 				BED3CAB420543936007968FF /* SettingsViewController.swift in Sources */,
 			);
@@ -495,7 +491,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				DEVELOPMENT_TEAM = WGDTL59UK7;
 				INFOPLIST_FILE = "$(SRCROOT)/Textor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -516,7 +512,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 6G5LMQ72D8;
+				DEVELOPMENT_TEAM = WGDTL59UK7;
 				INFOPLIST_FILE = "$(SRCROOT)/Textor/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

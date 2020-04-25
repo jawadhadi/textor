@@ -30,58 +30,13 @@ class FontPickerViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
-		updateTheme()
+
 		title = "Fonts"
 		
 		self.searchController.searchResultsUpdater = self
 		self.navigationItem.searchController = searchController
 		self.definesPresentationContext = true
     }
-	
-	func updateTheme() {
-		
-		let theme = UserDefaultsController.shared.theme
-		
-		switch theme {
-		case .light:
-			tableView.backgroundColor = .white
-			navigationController?.navigationBar.barStyle = .default
-			tableView.separatorColor = .gray
-			
-		case .dark:
-			tableView.backgroundColor = UIColor(white: 0.07, alpha: 1)
-			navigationController?.navigationBar.barStyle = .black
-			tableView.separatorColor = UIColor(white: 0.2, alpha: 1)
-			
-		}
-		
-	}
-	
-	func updateTheme(for cell: UITableViewCell) {
-		
-		let theme = UserDefaultsController.shared.theme
-		
-		switch theme {
-		case .light:
-			cell.backgroundColor = .clear
-			
-			for label in cell.subviewLabels() {
-				label.textColor = .black
-				label.highlightedTextColor = .white
-			}
-			
-		case .dark:
-			cell.backgroundColor = .clear
-			
-			for label in cell.subviewLabels() {
-				label.textColor = .white
-				label.highlightedTextColor = .black
-			}
-			
-		}
-		
-	}
 	
 	func searchFonts(searchText: String) {
 		
@@ -104,8 +59,6 @@ class FontPickerViewController: UITableViewController {
 			cell.accessoryType = .none
 		}
 		tableView.reloadRows(at: [indexPath], with: .automatic)
-		
-		updateTheme(for: cell)
 		
 	}
 	

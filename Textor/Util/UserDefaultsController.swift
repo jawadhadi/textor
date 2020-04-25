@@ -19,28 +19,6 @@ class UserDefaultsController {
 		self.userDefaults = userDefaults
 	}
 
-	var theme: Theme {
-		get {
-			guard let rawValue = userDefaults.object(forKey: "selectedTheme") as? String else {
-				return .light
-			}
-
-			return Theme(rawValue: rawValue) ?? .light
-		}
-		set {
-			userDefaults.set(newValue.rawValue, forKey: "selectedTheme")
-		}
-	}
-
-	var isDarkMode: Bool {
-		get {
-			return theme == .dark
-		}
-		set {
-			theme = newValue ? .dark : .light
-		}
-	}
-
 	var fontSize: CGFloat {
 		get {
 			return userDefaults.object(forKey: "fontSize") as? CGFloat ?? 17.0

@@ -13,7 +13,6 @@ class SettingsViewController: UITableViewController {
 
     @IBOutlet weak var fontSizeStepper: UIStepper!
     @IBOutlet weak var fontSizeLabel: UILabel!
-    @IBOutlet weak var darkThemeSwitch: UISwitch!
 
     override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,17 +20,12 @@ class SettingsViewController: UITableViewController {
 		fontSizeStepper.value = Double(UserDefaultsController.shared.fontSize)
         fontSizeLabel.text = "\(Int(fontSizeStepper.value))"
 
-        darkThemeSwitch.isOn = UserDefaultsController.shared.isDarkMode
-		
-		NotificationCenter.default.addObserver(self, selector: #selector(didChangeTheme), name: .themeChanged, object: nil)
-		
-		updateTheme()
 	}
 
 	override func viewWillLayoutSubviews() {
 		super.viewWillLayoutSubviews()
 		
-		let indexPathForFontRow = IndexPath(item: 5, section: 0)
+		let indexPathForFontRow = IndexPath(item: 2, section: 0)
 		let fontCell = tableView.cellForRow(at: indexPathForFontRow)
 		fontCell?.detailTextLabel?.text = UserDefaultsController.shared.font
 	}
@@ -46,74 +40,6 @@ class SettingsViewController: UITableViewController {
 		UserDefaultsController.shared.fontSize = CGFloat(sender.value)
         fontSizeLabel.text = "\(Int(sender.value))"
     }
-
-    @IBAction func themeChanged(_ sender: UISwitch) {
-		UserDefaultsController.shared.isDarkMode = sender.isOn
-        NotificationCenter.default.post(name: .themeChanged, object: nil)
-    }
-
-	@objc
-	func didChangeTheme() {
-
-		UIView.animate(withDuration: 0.3) {
-			self.updateTheme()
-		}
-		
-	}
-	
-	func updateTheme() {
-		
-		let theme = UserDefaultsController.shared.theme
-		
-		switch theme {
-		case .light:
-			tableView.backgroundColor = .groupTableViewBackground
-			navigationController?.navigationBar.barStyle = .default
-			tableView.separatorColor = .gray
-			
-		case .dark:
-			tableView.backgroundColor = .darkBackgroundColor
-			navigationController?.navigationBar.barStyle = .black
-			tableView.separatorColor = UIColor(white: 0.2, alpha: 1)
-
-		}
-		
-		for cell in tableView.visibleCells {
-			updateTheme(for: cell)
-		}
-		
-	}
-	
-	func updateTheme(for cell: UITableViewCell) {
-		
-		let theme = UserDefaultsController.shared.theme
-		
-		switch theme {
-		case .light:
-			cell.backgroundColor = .white
-			
-			for label in cell.subviewLabels() {
-				label.textColor = .black
-				label.highlightedTextColor = .white
-			}
-			
-		case .dark:
-			cell.backgroundColor = UIColor(white: 0.07, alpha: 1)
-			
-			for label in cell.subviewLabels() {
-				label.textColor = .white
-				label.highlightedTextColor = .black
-			}
-			
-		}
-		
-	}
-
-	override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		
-		updateTheme(for: cell)
-		
-	}
 	
 	override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
 
@@ -162,30 +88,9 @@ class SettingsViewController: UITableViewController {
 			let url: String?
 			switch indexPath.row {
 			case 0:
-				// Review on App Store
-				let appId = "1330406995"
-				url = "itms-apps://itunes.apple.com/us/app/textor/id\(appId)?action=write-review"
-			case 1:
 				// GitHub
 				url = "https://github.com/louisdh/textor"
 			case 2:
-				// Twitter
-				url = "https://twitter.com/LouisDhauwe"
-			case 3:
-				// Contact Us
-				url = nil
-
-				if MFMailComposeViewController.canSendMail() {
-
-					let mailComposeViewController = configuredMailComposeViewController()
-					self.present(mailComposeViewController, animated: true, completion: nil)
-
-				} else {
-
-					self.showSendMailErrorAlert()
-
-				}
-			case 5:
 				// Font picker
 				url = nil
 				
