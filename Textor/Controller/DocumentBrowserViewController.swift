@@ -21,8 +21,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController {
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
 
-		view.tintColor = .appTintColor
-
 		let settingsBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Settings"), style: .done, target: self, action: #selector(showSettings))
 		
 		self.additionalLeadingNavigationBarButtonItems = [settingsBarButtonItem]
@@ -36,8 +34,6 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController {
 		if UserDefaultsController.shared.isFastlane {
 
 			var snapshotDocuments = ["Think different.txt", "Planets.txt", "Circle.svg"]
-
-			NotificationCenter.default.post(name: .themeChanged, object: nil)
 
 			if self.view.bounds.width > 600 {
 				snapshotDocuments.append("Pharaoh.txt")

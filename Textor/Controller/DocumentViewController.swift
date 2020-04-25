@@ -25,9 +25,6 @@ class DocumentViewController: UIViewController {
 		
 		textView.delegate = self
 		
-		self.navigationController?.view.tintColor = .appTintColor
-		self.view.tintColor = .appTintColor
-		
 		textView.alwaysBounceVertical = true
 		
 		keyboardObserver.observe { [weak self] (state) in

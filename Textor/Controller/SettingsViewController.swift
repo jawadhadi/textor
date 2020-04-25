@@ -150,11 +150,7 @@ class SettingsViewController: UITableViewController {
 
 		alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
 
-		self.present(alert, animated: true) { () -> Void in
-
-			alert.view.tintColor = .appTintColor
-
-		}
+		self.present(alert, animated: true)
 
 	}
 
@@ -171,11 +167,7 @@ extension SettingsViewController: MFMailComposeViewControllerDelegate {
 
 			alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
 
-			self.present(alert, animated: true) { () -> Void in
-
-				alert.view.tintColor = .appTintColor
-
-			}
+			self.present(alert, animated: true)
 
 		}
 

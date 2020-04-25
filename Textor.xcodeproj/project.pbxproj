@@ -22,13 +22,11 @@
 		BEC104E520546730009F56E7 /* Pharaoh.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEC104E420546730009F56E7 /* Pharaoh.txt */; };
 		BEC104E720546899009F56E7 /* Mouse.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEC104E620546899009F56E7 /* Mouse.txt */; };
 		BECE40FA2038DB67004889F0 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE40F92038DB67004889F0 /* UIViewController+Alerts.swift */; };
-		BECE41042038DD45004889F0 /* UIColor+Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECE41032038DD45004889F0 /* UIColor+Named.swift */; };
 		BED3CAB420543936007968FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3CAB320543936007968FF /* SettingsViewController.swift */; };
 		BED3CAB72054405A007968FF /* Think different.txt in Resources */ = {isa = PBXBuildFile; fileRef = BED3CAB62054405A007968FF /* Think different.txt */; };
 		BED3CABF20544197007968FF /* Textor_UI_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3CABE20544197007968FF /* Textor_UI_Tests.swift */; };
 		BED3CAC7205441A1007968FF /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED3CAC6205441A0007968FF /* SnapshotHelper.swift */; };
 		BED6707D201BB1B200D04AD5 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6707C201BB1B200D04AD5 /* KeyboardObserver.swift */; };
-		BEDDAB152058745300AC9396 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDAB142058745300AC9396 /* Notification+Name.swift */; };
 		BEDDAB1720587C1700AC9396 /* UserDefaultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDAB1620587C1700AC9396 /* UserDefaultsController.swift */; };
 		BEDDAB192058811F00AC9396 /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDAB182058811F00AC9396 /* Bundle+Info.swift */; };
 		BEDDAB1B2058813800AC9396 /* UIDevice+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDAB1A2058813800AC9396 /* UIDevice+Name.swift */; };
@@ -64,7 +62,6 @@
 		BEC104E420546730009F56E7 /* Pharaoh.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pharaoh.txt; sourceTree = "<group>"; };
 		BEC104E620546899009F56E7 /* Mouse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mouse.txt; sourceTree = "<group>"; };
 		BECE40F92038DB67004889F0 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
-		BECE41032038DD45004889F0 /* UIColor+Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Named.swift"; sourceTree = "<group>"; };
 		BED3CAB320543936007968FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BED3CAB62054405A007968FF /* Think different.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Think different.txt"; sourceTree = "<group>"; };
 		BED3CABC20544197007968FF /* Textor UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Textor UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +69,6 @@
 		BED3CAC020544197007968FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BED3CAC6205441A0007968FF /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		BED6707C201BB1B200D04AD5 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
-		BEDDAB142058745300AC9396 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		BEDDAB1620587C1700AC9396 /* UserDefaultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsController.swift; sourceTree = "<group>"; };
 		BEDDAB182058811F00AC9396 /* Bundle+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 		BEDDAB1A2058813800AC9396 /* UIDevice+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Name.swift"; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 				BED6707C201BB1B200D04AD5 /* KeyboardObserver.swift */,
 				BE31644D1FF95FF00071AE58 /* DocumentManager.swift */,
 				BECE40F92038DB67004889F0 /* UIViewController+Alerts.swift */,
-				BECE41032038DD45004889F0 /* UIColor+Named.swift */,
-				BEDDAB142058745300AC9396 /* Notification+Name.swift */,
 				BEDDAB1620587C1700AC9396 /* UserDefaultsController.swift */,
 				BEDDAB182058811F00AC9396 /* Bundle+Info.swift */,
 				BEDDAB1A2058813800AC9396 /* UIDevice+Name.swift */,
@@ -320,13 +314,11 @@
 				BEDDAB1B2058813800AC9396 /* UIDevice+Name.swift in Sources */,
 				BEFE545020697B1000FEFE93 /* FontPickerViewController.swift in Sources */,
 				BE000C281FF9451F00D06B91 /* DocumentBrowserViewController.swift in Sources */,
-				BECE41042038DD45004889F0 /* UIColor+Named.swift in Sources */,
 				BE3BE749205B046E0044356A /* UITableViewCell+Labels.swift in Sources */,
 				BE000C261FF9451F00D06B91 /* AppDelegate.swift in Sources */,
 				BE5CE1132059AA2500158BE9 /* StoryboardFactory.swift in Sources */,
 				BED6707D201BB1B200D04AD5 /* KeyboardObserver.swift in Sources */,
 				BECE40FA2038DB67004889F0 /* UIViewController+Alerts.swift in Sources */,
-				BEDDAB152058745300AC9396 /* Notification+Name.swift in Sources */,
 				BEDDAB192058811F00AC9396 /* Bundle+Info.swift in Sources */,
 				BE31644E1FF95FF00071AE58 /* DocumentManager.swift in Sources */,
 				BED3CAB420543936007968FF /* SettingsViewController.swift in Sources */,
@@ -422,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -475,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -493,12 +485,13 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = WGDTL59UK7;
 				INFOPLIST_FILE = "$(SRCROOT)/Textor/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jhadi.plaintextedit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -514,11 +507,12 @@
 				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = WGDTL59UK7;
 				INFOPLIST_FILE = "$(SRCROOT)/Textor/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jhadi.plaintextedit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
