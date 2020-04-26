@@ -27,6 +27,8 @@ class DocumentViewController: UIViewController {
 		
 		textView.alwaysBounceVertical = true
 		
+		updateFont()
+		
 		keyboardObserver.observe { [weak self] (state) in
 			
 			guard let textView = self?.textView else {
@@ -76,6 +78,15 @@ class DocumentViewController: UIViewController {
 			}
 			
 		})
+		
+	}
+	
+	
+	private func updateFont() {
+		
+		let font = UserDefaultsController.shared.font
+		let fontSize = UserDefaultsController.shared.fontSize
+		textView.font = UIFont(name: font, size: fontSize)
 		
 	}
 	
